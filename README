@@ -1,1 +1,4 @@
-A puppet module to manage puppet clients and puppetmasters.
+Class: puppet
+-
+Manages both puppet client and puppet master.
+
