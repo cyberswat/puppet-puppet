@@ -11,7 +11,7 @@
 #   The name of the registered puppet master service.
 #
 class puppet::master(
-  $config_hash  = {}
+  $config = {}
 ) inherits puppet::params {
 
   package { $puppet::params::puppet_server_package:

@@ -12,14 +12,14 @@
 # === Examples
 #
 #  class { 'puppet::config' :
-#    config_hash => {
+#    config => {
 #      'puppetmaster' => 'puppet.example.com'
 #    }
 #  }
 #
 #
 class puppet::config(
-  $config_hash  = {}
+  $config  = {}
 ) inherits puppet::params {
 
   file { $puppet::params::puppet_config:
