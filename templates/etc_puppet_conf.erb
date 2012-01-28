@@ -1,5 +1,4 @@
 <%= scope.function_header([File.mtime(__FILE__)]) %>
-
 [main]
     # The Puppet log directory.
     # The default value is '$vardir/log'.
@@ -12,8 +11,6 @@
     # Where SSL certificates are kept.
     # The default value is '$confdir/ssl'.
     ssldir = $vardir/ssl
-
-    reports = log,store
 
 [agent]
     # The file in which puppetd stores a list of the classes
@@ -28,8 +25,5 @@
     # The default value is '$confdir/localconfig'.
     localconfig = $vardir/localconfig
 
-    # Set clients to send reports on commits back to the puppetmaster.
-    report = true
-
-    server = <%= config_hash['puppetmaster'] %>
+    server = <%= conf['master'] %>
 

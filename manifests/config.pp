@@ -19,7 +19,7 @@
 #
 #
 class puppet::config(
-  $config  = {}
+  $conf  = {}
 ) inherits puppet::params {
 
   file { $puppet::params::puppet_config:
