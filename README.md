@@ -13,9 +13,7 @@ Variables
 Examples
 -
     class { 'puppet::config' :
-      conf => {
-        'master' => 'puppet.example.com'
-      }
+      master => 'puppet.example.com'
     }
 Class: puppet::params
 =
