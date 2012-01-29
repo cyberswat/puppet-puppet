@@ -7,14 +7,16 @@ Manages variables for both puppet client and puppet master.
 Variables
 -
  * [*master*]
-   The fully qualified name of the puppet master.  In the case of a
-   puppet client the name will be the clients master otherwise it is the masters name.  Used in puppet/etc_puppet_conf.erb.
+   The fully qualified name of the puppet master.  Will default to the puppets fqdn.
+   Default: $fqdn
+   Optional: yes
 
 Examples
 -
     class { 'puppet::config' :
       master => 'puppet.example.com'
     }
+
 Class: puppet::params
 =
 Declares and sets the parameters necessary for the puppet module.
