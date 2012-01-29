@@ -1,4 +1,4 @@
-# == Class: puppet::parmas
+# == Class: puppet::params
 #
 # Declares and sets the parameters necessary for the puppet module.
 #

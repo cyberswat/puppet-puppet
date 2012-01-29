@@ -18,11 +18,6 @@ class puppet::master(
     ensure => present,
   }
 
-  # register the puppetmaster service if necessary.
-  exec { "/sbin/chkconfig --add ${puppet::params::puppet_server_service} && /sbin/chkconfig ${puppet::params::puppet_server_service} on":
-    onlyif => "/usr/bin/test `/sbin/chkconfig --list ${puppet::params::puppet_server_service} | /usr/bin/wc -l`"
-  }
-
   service { $puppet::params::puppet_server_service:
     ensure => running,
     hasstatus => true,
